@@ -1,0 +1,1 @@
+git@github.com:iammashix/slozhno-sosredotochitsya.git
