@@ -8,6 +8,7 @@
   font-family: var(--font-family, 'IBM Plex Mono', monospace);
   font-size: var(--font-size, 18px);
   line-height: var(--line-height, 1.3);
+  background-attachment: fixed
 }
 
 .header {
