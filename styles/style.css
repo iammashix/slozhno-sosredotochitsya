@@ -129,7 +129,7 @@
   gap: 10px;
 }
 
-.main-sectionn-title {
+.main-section-title {
   color: var(--title-color, #353430);
   font-size: var(--font-size, 18px)
 }
