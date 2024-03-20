@@ -25,7 +25,7 @@
   display: var(--display-rec, none);
   align-items: center;
   gap: 10px;
-  color: var(--accent-color, #ff0070);
+  color: var(--accent-color, #dcbac9);
   inset-block-start: var(--general-padding, 10px);
   inset-inline-end: calc(var(--general-padding, 10px) + 8px);
   position: absolute;
@@ -131,12 +131,15 @@
   gap: 10px;
 }
 
-.main-sectionn-title {
+.main-section-title {
   color: var(--title-color, #353430);
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
 
 .title-decor {
+  font-size: 18px;
   color: var(--title-decor-color, #353430);
   font-weight: 700;
   background-color: var(--accent-color, #ff8dcb);
