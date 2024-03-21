@@ -116,12 +116,20 @@
 .main {
   display: flex;
   flex-direction: column;
+  padding-left: var(--general-padding);
+  padding-right: var(--general-padding);
 }
 
 .main-section {
+  margin-block-start: 80px;
   display: grid;
   gap: 20px;
 }
+
+.reason {
+  margin-block-start: 60px;
+}
+
 
 .main-section-content {
   display: flex;
@@ -163,20 +171,56 @@
   outline: 1px solid var(--text-color, #353430);
 }
 
-.main-section.gallery {
-  grid-template-rows: auto 142px 355px 237px 355px 237px;
+.gallery {
+  margin-block-start: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.gallery-picture {
+.gallery-pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax(
+      auto,
+      435px
+    );
+  gap: 20px;
+}
+
+.sun {
+  block-size: clamp(142px, 192px, 260px);
+  grid-column: span 2;
   inline-size: 100%;
   block-size: 100%;
-}
-
-.gallery-picture-item {
   object-fit: cover;
-  object-position: center;
+}
+
+.ice-cream {
+  grid-row: span 2;
   inline-size: 100%;
   block-size: 100%;
+  object-fit: cover;
+}
+
+.tape {
+  grid-row: span 2;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.book {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.street {
+  grid-column: span 2;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 .footer::before {
@@ -194,6 +238,7 @@
   grid-template-rows: auto 1fr auto;
   padding: var(--general-padding, 10px);
   block-size: max(100vb, 668px);
+  margin-block-start: 60px;
 }
 
 .footer::after {
@@ -211,6 +256,8 @@
   font-weight: 700;
   text-shadow: 2px 2px 0px var(--accent-color, #ff8dcb);
 }
+
+
 
 @media (width < 768px) {
   .gallery {
@@ -260,18 +307,11 @@
     grid-column: span 2;
   }
 
-.main-section.gallery {
-    grid-template-rows: auto 192px 230px 318px;
-  }
-
-.gallery-picture:nth-of-type(1),
-.gallery-picture:nth-of-type(5) {
-    grid-column: span 2;
-  }
-
-.gallery-picture:nth-of-type(2),
-.gallery-picture:nth-of-type(3) {
-    grid-row: span 2;
+.gallery-pictures {
+  grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax(
+    auto,
+    435px
+  );
   }
 }
 
@@ -302,12 +342,8 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-.factors .mmain-section-content {
+.factors .main-section-content {
     grid-column: span 1;
     grid-row: 2/3;
-  }
-
-.main-section.gallery {
-    grid-template-rows: auto 260px 315px 428px;
   }
 }
